@@ -38,17 +38,17 @@ const founders = [
 
 export default function BeliefsSection() {
   return (
-    <section className="w-full bg-white py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1330px] px-6 md:px-8">
+    <section className="w-full bg-white py-10 md:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1330px] px-4 md:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12 text-center md:mb-14 lg:mb-16"
+          className="mb-8 text-center md:mb-14 lg:mb-16"
         >
-          <h2 className="mb-3 text-[36px] font-medium text-black md:text-[40px] lg:text-[44px]">
+          <h2 className="mb-2 text-[28px] font-medium text-black md:text-[40px] lg:text-[44px]">
             Three beliefs that guide our company
           </h2>
           <p className="text-[14px] font-medium text-[#898989] md:text-[15px] lg:text-[16px]">
@@ -57,22 +57,22 @@ export default function BeliefsSection() {
         </motion.div>
 
         {/* Main Content - Two Columns */}
-        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
+        <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16 lg:gap-20">
           {/* Left Column - Beliefs Text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col"
+            className="flex flex-col text-center md:text-left"
           >
             {beliefs.map((belief, index) => (
               <div key={belief.id}>
-                <div className="py-8">
-                  <h3 className="mb-4 text-[18px] font-medium leading-snug text-black md:text-[19px] lg:text-[20px]">
+                <div className="py-5 md:py-8">
+                  <h3 className="mb-3 text-[16px] font-medium leading-snug text-black md:text-[19px] lg:text-[20px]">
                     {belief.title}
                   </h3>
-                  <p className="text-[14px] font-medium leading-relaxed text-[#898989] md:text-[15px] lg:text-[16px]">
+                  <p className="text-[13px] font-medium leading-relaxed text-[#898989] md:text-[15px] lg:text-[16px]">
                     {belief.description}
                   </p>
                 </div>
@@ -90,16 +90,19 @@ export default function BeliefsSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col gap-8"
+            className="flex flex-col gap-6 text-center md:gap-8 md:text-left"
           >
             {founders.map((founder) => (
-              <div key={founder.id} className="grid grid-cols-[auto_1fr] gap-4">
+              <div
+                key={founder.id}
+                className="grid grid-cols-[auto_1fr] gap-3 md:gap-4"
+              >
                 {/* Profile Image */}
                 <div className="overflow-hidden rounded-2xl">
                   <img
                     src={founder.image}
                     alt={founder.name}
-                    className="h-[250px] w-[250px] object-cover"
+                    className="h-[180px] w-[180px] object-cover md:h-[250px] md:w-[250px]"
                   />
                 </div>
 
@@ -109,16 +112,16 @@ export default function BeliefsSection() {
                   <img
                     src="/signature.png"
                     alt="Signature"
-                    className="-ml-[50px] mb-2 h-auto w-32"
+                    className="-ml-[30px] mb-2 h-auto w-24 md:-ml-[50px] md:w-32"
                   />
 
                   {/* Name */}
-                  <p className="mb-1 text-[18px] font-medium text-[#414141] md:text-[19px] lg:text-[20px]">
+                  <p className="mb-1 text-[16px] font-medium text-[#414141] md:text-[19px] lg:text-[20px]">
                     {founder.name}
                   </p>
 
                   {/* Title */}
-                  <p className="text-[14px] font-medium text-[#898989] md:text-[15px] lg:text-[16px]">
+                  <p className="text-[12px] font-medium text-[#898989] md:text-[15px] lg:text-[16px]">
                     {founder.title}
                   </p>
                 </div>

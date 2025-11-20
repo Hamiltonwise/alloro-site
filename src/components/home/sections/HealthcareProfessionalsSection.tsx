@@ -78,20 +78,20 @@ export default function HealthcareProfessionalsSection() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="w-full bg-[#F7F7F7] py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1330px] px-6 md:px-8">
+    <section className="w-full bg-[#F7F7F7] py-10 md:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1330px] px-4 md:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12 text-center md:mb-14 lg:mb-16"
+          className="mb-8 text-center md:mb-14 lg:mb-16"
         >
-          <h2 className="mb-4 text-[32px] font-semibold text-black md:text-[40px] lg:text-[48px]">
+          <h2 className="mb-3 text-[28px] font-semibold text-black md:text-[40px] lg:text-[48px]">
             Trusted by Healthcare Professionals
           </h2>
-          <p className="text-[18px] font-normal text-[#888888] md:text-[20px] lg:text-[22px]">
+          <p className="text-[16px] font-normal text-[#888888] md:text-[20px] lg:text-[22px]">
             Real Doctors. Real Results. Real impact on their practises
           </p>
         </motion.div>
@@ -111,37 +111,37 @@ export default function HealthcareProfessionalsSection() {
                   x: { type: "spring", stiffness: 300, damping: 30 },
                   opacity: { duration: 0.2 },
                 }}
-                className="p-8 md:p-12 lg:p-16"
+                className="p-5 md:p-12 lg:p-16"
               >
                 {/* Practice Info - Centered at top */}
-                <div className="mb-8 text-center lg:mb-12">
-                  <h3 className="mb-2 text-[32px] font-semibold text-black md:text-[36px] lg:text-[40px]">
+                <div className="mb-6 text-center lg:mb-12">
+                  <h3 className="mb-2 text-[24px] font-semibold text-black md:text-[36px] lg:text-[40px]">
                     {currentTestimonial.practiceName}
                   </h3>
-                  <p className="text-[18px] font-medium text-black md:text-[19px] lg:text-[20px]">
+                  <p className="text-[16px] font-medium text-black md:text-[19px] lg:text-[20px]">
                     {currentTestimonial.practiceSubtitle}
                   </p>
                 </div>
 
                 {/* Content Grid: Quote/Stats (1/3) + Image (2/3) */}
-                <div className="grid items-center gap-8 md:grid-cols-3 md:gap-12">
+                <div className="grid items-center gap-6 md:grid-cols-3 md:gap-12">
                   {/* Left Content - Quote & Stats (1/3) */}
-                  <div className="flex flex-col justify-center md:col-span-1">
+                  <div className="flex flex-col justify-center text-center md:col-span-1 md:text-left">
                     {/* Quote */}
-                    <div className="mb-8">
-                      <p className="text-[16px] font-normal leading-relaxed text-[#666666] md:text-[17px] lg:text-[18px]">
+                    <div className="mb-6 md:mb-8">
+                      <p className="text-[14px] font-normal leading-relaxed text-[#666666] md:text-[17px] lg:text-[18px]">
                         "{currentTestimonial.quote}"
                       </p>
                     </div>
 
-                    {/* Stats */}
-                    <div className="flex flex-col gap-6">
+                    {/* Stats - Single row on mobile, stacked on desktop */}
+                    <div className="grid grid-cols-3 gap-4 md:flex md:flex-col md:gap-6">
                       {currentTestimonial.stats.map((stat, index) => (
-                        <div key={index}>
-                          <div className="mb-1 text-[48px] font-bold text-black md:text-[52px] lg:text-[56px]">
+                        <div key={index} className="flex flex-col">
+                          <div className="mb-1 text-[28px] font-bold text-black md:text-[52px] lg:text-[56px]">
                             {stat.number}
                           </div>
-                          <div className="text-[14px] font-normal text-[#888888] md:text-[15px] lg:text-[16px]">
+                          <div className="text-[10px] font-normal leading-tight text-[#888888] md:text-[15px] lg:text-[16px]">
                             {stat.label}
                           </div>
                         </div>

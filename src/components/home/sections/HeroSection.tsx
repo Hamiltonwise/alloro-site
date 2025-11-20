@@ -3,15 +3,15 @@ import { Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#F9FAFB] py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-8">
+    <section className="relative w-full overflow-hidden bg-[#F9FAFB] py-10 md:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1400px] px-4 md:px-8">
         {/* Header Text */}
-        <div className="mb-12 text-center md:mb-16 lg:mb-20">
+        <div className="mb-8 text-center md:mb-16 lg:mb-20">
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 text-[22px] font-medium text-[#777777]"
+            className="mb-4 text-[16px] font-medium text-[#777777] md:text-[22px]"
           >
             Ending healthcare burnout with intelligence, clarity, and care.
           </motion.p>
@@ -19,7 +19,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-[42px] font-medium leading-[48px] tracking-[-1px] text-black md:text-[65px] md:leading-[70px] md:tracking-[-1.5px] lg:text-[85px] lg:leading-[90px] lg:tracking-[-2px]"
+            className="text-[32px] font-medium leading-[38px] tracking-[-0.5px] text-black md:text-[65px] md:leading-[70px] md:tracking-[-1.5px] lg:text-[85px] lg:leading-[90px] lg:tracking-[-2px]"
           >
             You take care of patients.
             <br />
@@ -28,7 +28,7 @@ export default function HeroSection() {
         </div>
 
         {/* Phone Mockup with Floating Cards */}
-        <div className="relative mx-auto flex min-h-[650px] w-full max-w-[1200px] items-center justify-center md:min-h-[750px] lg:min-h-[850px]">
+        <div className="relative mx-auto flex min-h-[500px] w-full max-w-[1200px] items-center justify-center md:min-h-[750px] lg:min-h-[850px]">
           {/* Left Floating Cards - positioned individually */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -88,7 +88,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.5 }}
-              className="relative -mt-[200px] w-[90vw] max-w-[700px] rounded-2xl bg-white px-4 py-4 shadow-xl sm:px-6 sm:py-5 md:px-8 md:py-6"
+              className="relative -mt-[150px] w-[92vw] max-w-[700px] rounded-2xl bg-white px-3 py-3 shadow-xl sm:px-6 sm:py-5 md:px-8 md:py-6"
             >
               <div className="flex w-full flex-col items-start gap-3 md:flex-nowrap md:gap-4">
                 <div className="flex items-start gap-2 md:gap-3">
@@ -151,7 +151,7 @@ export default function HeroSection() {
         </div>
 
         {/* Spacer for bottom card */}
-        <div className="h-12 md:h-16"></div>
+        <div className="h-8 md:h-16"></div>
       </div>
     </section>
   );
