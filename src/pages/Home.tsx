@@ -6,6 +6,7 @@ import SetupSection from "@/components/home/sections/SetupSection";
 import HealthcareProfessionalsSection from "@/components/home/sections/HealthcareProfessionalsSection";
 import FormSection from "@/components/home/sections/FormSection";
 import BeliefsSection from "@/components/home/sections/BeliefsSection";
+import FooterSection from "@/components/home/sections/FooterSection";
 
 function Home() {
   return (
@@ -18,7 +19,7 @@ function Home() {
       <HealthcareProfessionalsSection />
       <FormSection />
       <BeliefsSection />
-      {/* Additional sections will be added here */}
+      <FooterSection />
     </main>
   );
 }
